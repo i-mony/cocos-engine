@@ -161,7 +161,7 @@ export class NodePool {
             // @ts-ignore
             const handler = this.poolHandlerComp ? obj.getComponent(this.poolHandlerComp) : null;
             if (handler && handler.reuse) {
-                handler.reuse(arguments);
+                handler.reuse(...args);
             }
             return obj;
         }
